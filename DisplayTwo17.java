@@ -9,7 +9,7 @@ public class DisplayTwo17 {
         numInput = input.nextInt();
         
         for (int i = 2; i <= numInput; i += 2) {
-            System.out.println("2 multiple: " + i);
+            System.out.print( i + " ");
         }
     }
 }
