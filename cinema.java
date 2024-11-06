@@ -4,11 +4,11 @@ public class cinema {
         Scanner input = new Scanner(System.in);
         int totalTicketsSold = 0;
         double ticketPrice = 50000;
-        double totalTicketSalesPrice = 0;
+        double totalTicketSalesPrice = 0, buyTicket, ticketCost, discount, totalPrice;
 
         while (true) {
             System.out.print("Enter number of tickets to buy (negative number to exit): ");
-            double buyTicket = input.nextDouble();
+            buyTicket = input.nextDouble();
 
             if (buyTicket < 0) {
                 break;
@@ -19,8 +19,8 @@ public class cinema {
                 continue;
             }
 
-            double ticketCost = ticketPrice * buyTicket;
-            double discount = 0;
+            ticketCost = ticketPrice * buyTicket;
+            discount = 0;
 
             if (buyTicket > 10) {
                 discount = 0.15 * ticketCost;
@@ -29,7 +29,7 @@ public class cinema {
                 discount = 0.10 * ticketCost;
                 System.out.println("Get discount 10%.");
             }
-            double totalPrice = ticketCost - discount;
+            totalPrice = ticketCost - discount;
             totalTicketsSold += buyTicket;
             totalTicketSalesPrice += totalPrice;
 
