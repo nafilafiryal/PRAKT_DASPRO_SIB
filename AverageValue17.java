@@ -6,8 +6,6 @@ public class AverageValue17 {
         int i,j, nilaiSiswa;
         float nilai, totalNilai, rataNilai;
         
-        
-            
             i = 1;
             while (i<=5) {
                 System.out.println("Input Nilai Mahasiswa ke " + i);
