@@ -11,7 +11,7 @@ public class Assignment3Array1 {
             if (search == array[i]) {
                 System.out.print("The number " + search + " is in index " + i);
                 break;
-            }
+            } 
             
         }
         
