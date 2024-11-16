@@ -4,31 +4,28 @@ public class ArrayAverageScore17 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int[] score = new int[10];
-        double total=0;
-        double average;
-        int studentPassed = 0;
-        int numStudent, numPassed;
+        double averagePassed, averageFailed;
+        int studentPassed=0, studentFailed=0, numPassed=0, numFailed=0;
+        int numStudent;
+
         System.out.print("Enter the number of student: ");
         numStudent = input.nextInt();
-
-        for (int i = 0; i < score.length; i++) {
-            System.out.print("Enter student score " + (i+1) + ": ");
+        for (int i = 0; i < numStudent; i++) {
+            System.out.print("Enter the final score " + i + ": ");
             score[i]=input.nextInt();
         }
-        System.out.println("Student who passed: ");
         for (int i = 0; i < numStudent; i++) {
         if (score[i] > 70) {
-            System.out.println("Student " + (i+1) );
-            studentPassed++;
+            studentPassed += score[i];
+            numPassed++;
+        } else {
+            studentFailed += score[i];
+            numFailed++;
         }
         }
-        
-        
-        for (int i = 0; i < score.length; i++) {
-            total += score[i];
-        }
-        average = total / score.length;
-        System.out.println("The class average score is " + average);
-        System.out.println("The number of students passed: " + studentPassed);
+        averagePassed = (double)studentPassed / numPassed;
+        averageFailed = (double)studentFailed / numFailed;
+        System.out.println("The average score of students who passed is " + averagePassed);
+        System.out.println("The average score of students who failed is " + averageFailed);
     }
 }
